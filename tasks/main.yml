@@ -1,6 +1,6 @@
 ---
 - include: "Debian.yml"
-  when: ansible_os_family == 'Debian'
+  when: ansible_os_family in ['Debian','Linuxmint']
 
 - name: Ensure download directory exist
   file: state=directory dest={{ dell_printers_tmp_dir }}
